@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  background-image: url('./baseline-portal.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+.chatbot-button {
+  position: fixed;
+  bottom: 35px;
+  right: 50px;
+  cursor: pointer;
+  padding: 20px;
+}
+.chat-interface {
+  display: none;
+  position: fixed;
+  bottom: 120px;
+  right: 70px;
+  width: 500px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  height: 600px;
+}
+.chat-interface .messages {
+  height: 480px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+}
+.chat-interface input {
+  width: calc(100% - 10px);
+  padding: 10px 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.chat-interface button {
+  padding: 5px 10px;
+  width: 100%;
+}
+.message {
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.user-message {
+  justify-content: end;
+  background: #e6e6e6;
+}
+.bot-message {
+  justify-content: start;
+  background: #ecf7f5;
+}
+.bot-message img {
+  margin-right: 5px;
+}
+.bot-message svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}

@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  background-image: url('./sn-login-page-sp.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+#username {
+  position: absolute;
+  background-color: white;
+  padding: 8px;
+  top: 340px;
+  left: 250px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#password {
+  position: absolute;
+  background-color: white;
+  padding: 8px;
+  top: 395px;
+  left: 250px;
+  letter-spacing: 10px;
+}
+#password span {
+  display: inline-block;
+  width: 10px; /* Adjust the width of each dot based on your preference */
+  height: 10px; /* Adjust the height of each dot based on your preference */
+  border-radius: 50%; /* Make the dots circular */
+  background-color: black; /* Set the color of the dots */
+  margin-right: 5px; /* Adjust the spacing between dots based on your preference */
+}
