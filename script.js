@@ -14,7 +14,6 @@ const output = document.getElementById('chat-messages')
 function toggleChat() {
   const chatInterface = document.getElementById('chat-interface')
 
-  // Display the first bot message when chat is toggled
   if (!chatToggled && currentMessageIndex < messages.length) {
     const botMessage = document.createElement('span')
     botMessage.className = 'message bot-message'
@@ -26,7 +25,7 @@ function toggleChat() {
   `
 
     const botContent = document.createElement('span')
-    botContent.textContent = messages[0]
+    botContent.innerHTML = messages[0]
     botMessage.appendChild(botSvg)
     botMessage.appendChild(botContent)
 
@@ -34,12 +33,10 @@ function toggleChat() {
     output.scrollTop = output.scrollHeight
   }
 
-  // Toggle chat display
   chatInterface.style.display =
     chatInterface.style.display === 'none' ? 'block' : 'none'
   chatToggled = true
 
-  // Focus on the input
   input.focus()
 }
 
@@ -55,7 +52,7 @@ function sendMessage() {
 
   if (message) {
     const userMessage = document.createElement('span')
-    userMessage.textContent = message
+    userMessage.innerHTML = message
     userMessage.className = 'message user-message'
     output.appendChild(userMessage)
 
@@ -71,7 +68,7 @@ function sendMessage() {
       botMessage.appendChild(botSvg)
 
       const botContent = document.createElement('span')
-      botContent.textContent = messages[currentMessageIndex]
+      botContent.innerHTML = messages[currentMessageIndex]
       botMessage.appendChild(botContent)
 
       output.appendChild(botMessage)
